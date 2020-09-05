@@ -79,7 +79,7 @@ function deleteSvg(task) {
 //function to delete the task from screen and from Local storage
 function deleteTask() {
     //question to the user if he sure to delete the task
-    if (confirm('Are you sure to delete the task?')) {
+    if (confirm('Delete the task?')) {
         event.currentTarget.parentElement.remove();
     }
     //getting the specify index from task the id is single number
