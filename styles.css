@@ -27,7 +27,9 @@ label{
 }
 #noteAreaBox{
     overflow: auto;
-    width: 100%;
+    width: 70%;
+    background-color: inherit;
+    font: bolder x-large black;
 }
 #container{
     margin: 10px;
@@ -51,6 +53,12 @@ label{
     width: 100%;
     display: flex;
 }
+#buttons > *{
+    color: black;
+    font: bolder medium italic;
+    background-color: white;
+}
+/*Delete button id*/
 #button{
     float: left;
     position: relative;
