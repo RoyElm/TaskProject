@@ -1,3 +1,5 @@
+//getting the data that entered by the user and saving it
+//activate when the user click on save task button
 function saveTask() {
     //Using DOM manipulation to get form inputs
     const noteAreaBox = document.getElementById("noteAreaBox");
@@ -23,16 +25,20 @@ function saveTask() {
     timeBox.value = "";
     noteAreaBox.focus();
 }
+//activate when the page is load (used defer to read all proprieties)
 function displayAllTasks() {
     //getting the Main div of all tasks from HTML
     const container = document.getElementById("container");
     //Loading all tasks from Local Storage
     const allTask = loadingTasks();
     container.innerHTML = "";
+    //using another function to print all the tasks inside allTask array
     for (let i = 0; i < allTask.length; i++) {
         displayNewTask(i);
     }
 }
+//display the new task the user entered (adding one task only! per run!)
+//also using that function to create all tasks at the begging of web load
 function displayNewTask(i) {
     //Getting DOM Containers
     const container = document.getElementById("container");
