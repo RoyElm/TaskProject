@@ -14,12 +14,13 @@ h1{
 form{
     position: relative;
     left: 28%;
-    width: 50%;  
+    width: 40%;  
+    display: block;
     background-image: url(assets/images/formbg.jpg);
+    min-width: 285px;
 }
 table{
     height: 100%;
-    width: inherit;
 }
 label{
     background-color: whitesmoke;
@@ -27,7 +28,7 @@ label{
 }
 #noteAreaBox{
     overflow: auto;
-    width: 100%;
+    width: inherit;
     background-color: inherit;
     font: bolder large black;
 }
@@ -93,4 +94,10 @@ svg{
 @-ms-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
+}
+@media only screen and (max-width:768px){
+    [td*]{
+        width: 100%;
+        height: 100%;
+    }
 }
