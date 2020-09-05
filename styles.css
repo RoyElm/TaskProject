@@ -27,9 +27,9 @@ label{
 }
 #noteAreaBox{
     overflow: auto;
-    width: 70%;
+    width: 100%;
     background-color: inherit;
-    font: bolder x-large black;
+    font: bolder large black;
 }
 #container{
     margin: 10px;
