@@ -12,8 +12,7 @@ h1{
     font-family: myFirstFont;
 }
 form{
-    position: relative;
-    left: 28%;
+    margin: auto;
     width: 40%;  
     display: block;
     background-image: url(assets/images/formbg.jpg);
