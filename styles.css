@@ -1,0 +1,89 @@
+html {
+    overflow: auto;
+    height: 100%;
+    margin: 0 auto;
+}
+body{
+    background-image: url(assets/images/tile.jpg);
+}
+h1{
+    text-align: center;
+    font-size: xxx-large;
+    font-family: myFirstFont;
+}
+form{
+    position: relative;
+    left: 28%;
+    width: 50%;  
+    background-image: url(assets/images/formbg.jpg);
+}
+table{
+    height: 100%;
+    width: inherit;
+}
+#noteAreaBox{
+    overflow: auto;
+    width: 100%;
+}
+#container{
+    margin: 10px;
+    display: inline-block;
+}
+.containerTask {
+    display: inline-block;
+    padding: 25px;
+    width: 150px;
+    height: 200px;
+    background-image: url(assets/images/notebg.png); 
+}
+.mainTask{
+    width: 100%;
+    height: 80%;
+    margin-top: 10px;
+    overflow: auto;
+}
+.dateAndTime{
+    height: 20%;
+    width: 100%;
+    display: flex;
+}
+#button{
+    float: left;
+    position: relative;
+    top: -109%;
+    left: 87%;
+}
+svg{
+    border-radius: 6px;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(assets/fonts/GloriaHallelujah-Regular.ttf);
+}
+.fade-in {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}   
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}   
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}   
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}    
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
