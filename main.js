@@ -73,7 +73,7 @@ function showSvg(task) {
     const divButton = document.createElement("div");
     divButton.innerHTML = svg;
     divButton.setAttribute("id", "button");
-    divButton.setAttribute("onClick", "deleteTask()");
+    divButton.setAttribute("onclick", "deleteTask()");
     //Adding the divButton to specify task by using "this" method
     task.appendChild(divButton);
 }
