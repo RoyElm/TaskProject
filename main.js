@@ -9,6 +9,11 @@ function saveTask() {
     const noteArea = noteAreaBox.value;
     const date = dateBox.value;
     const time = timeBox.value;
+    if (noteArea === "") {
+        alert("Please enter text in task");
+        noteAreaBox.focus();
+        return;
+    }
     //Creating object of Form Task;
     const task = { noteArea, date, time }
     //Loading all tasks from local storage;
