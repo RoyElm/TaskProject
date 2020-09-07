@@ -52,12 +52,23 @@ label{
     height: 80%;
     margin-top: 10px;
     overflow: auto;
+    word-wrap: break-word;
 }
 /*Date and Time container*/
 .dateAndTime{
     height: 20%;
     width: 100%;
     display: flex;
+}
+#buttons > button{
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    font-weight: bold;
+}
+#buttons > input{
+    background-color: crimson;
+    border-radius: 10px;
+    font-weight: bold;
 }
 /*Delete button id*/
 #button{

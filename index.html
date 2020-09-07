@@ -8,30 +8,29 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="main.js"></script>
 </head>
-
 <body>
     <h1>My Task Board</h1>
-        <form>
-            <table>
-                <tr>
-                    <td><label for="noteAreaBox">Task:</label></td>
-                    <td><textarea name="noteAreaBox" id="noteAreaBox" rows="10"></textarea></td>
-                </tr>
-                <tr>
-                    <td><label for="dateBox">Date:</label></td>
-                    <td><input type="date" name="dateBox" id="dateBox"></td>
-                </tr>
-                <tr>
-                    <td><label for="timeBox">Time:</label></td>
-                    <td><input type="time" name="timeBox" id="timeBox"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td id="buttons"><button type="button" onclick="saveTask()">Save Task</button>
-                        <input type="reset" value="Reset Task"></td>
-                </tr>
-            </table>
-        </form>
+    <form>
+        <table>
+            <tr>
+                <td><label for="noteAreaBox">Task:</label></td>
+                <td><textarea name="noteAreaBox" id="noteAreaBox" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="dateBox">Date:</label></td>
+                <td><input type="date" name="dateBox" id="dateBox"></td>
+            </tr>
+            <tr>
+                <td><label for="timeBox">Time:</label></td>
+                <td><input type="time" name="timeBox" id="timeBox"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="buttons"><button type="button" onclick="saveTask()">Save Task</button>
+                    <input type="reset" value="Reset Task"></td>
+            </tr>
+        </table>
+    </form>
     <!--container for saved user tasks-->
     <div id="container"></div>
 </body>
