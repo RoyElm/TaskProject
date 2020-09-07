@@ -9,9 +9,15 @@ function saveTask() {
     const noteArea = noteAreaBox.value;
     const date = dateBox.value;
     const time = timeBox.value;
-    if (noteArea === "") {
-        alert("Please enter text in task");
+    reWhiteSpace = new RegExp(/^\s+$/);
+    // Check for white space
+    if (noteArea === "" || reWhiteSpace.test(noteArea)) {
+        alert("Please enter text");
         noteAreaBox.focus();
+        return;
+    }else if (date === "") {
+        alert("Please enter date");
+        dateBox.focus();
         return;
     }
     //Creating object of Form Task;
@@ -92,19 +98,24 @@ function deleteTask() {
     //question to the user if he sure to delete the task
     if (confirm('Delete the task?')) {
         event.currentTarget.parentElement.remove();
-    }
-    //getting the specify index from task the id is single number
-    const index = event.currentTarget.parentElement.id;
-    //loading tasks to delete the task from array
-    const allTask = loadingTasks();
-    allTask.splice(index, 1)
-    //adding the modified tasks
-    const allTaskJson = JSON.stringify(allTask);
-    localStorage.setItem("allTask", allTaskJson);
-    //clearing the storage 
-    //if the user don't have more tasks in storage
-    if (allTask.length <1) {
-        localStorage.clear();
+        //getting the specify index from task the id is single number
+        const index = event.currentTarget.parentElement.id;
+        //loading tasks to delete the task from array
+        const allTask = loadingTasks();
+        allTask.splice(index, 1)
+        //adding the modified tasks
+        const allTaskJson = JSON.stringify(allTask);
+        localStorage.setItem("allTask", allTaskJson);
+        //clearing the storage 
+        //if the user don't have more tasks in storage
+        if (allTask.length < 1) {
+            localStorage.clear();
+        }
+        const containerTask = document.getElementsByClassName("containerTask");
+        for (let i = 0; i < containerTask.length; i++) {
+            containerTask[i].setAttribute("id", `${i}`);
+        }
+
     }
 }
 //function to load tasks from local storage
