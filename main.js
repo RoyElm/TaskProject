@@ -68,7 +68,7 @@ function displayNewTask(i) {
     const dateAndTime = document.createElement("div");
     //adding to them the attribute.
     mainTask.setAttribute("class", "mainTask");
-    mainTask.innerHTML = `${allTask[i].noteArea}`;
+    mainTask.innerText = `${allTask[i].noteArea}`;
     dateAndTime.setAttribute("class", "dateAndTime");
     dateAndTime.innerHTML = `${allTask[i].date} <br> ${allTask[i].time}`;
     //adding the new elements to the containers
