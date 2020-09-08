@@ -102,7 +102,7 @@ function deleteTask() {
         const index = event.currentTarget.parentElement.id;
         //loading tasks to delete the task from array
         const allTask = loadingTasks();
-        allTask.splice(index, 1)
+        allTask.splice(index, 1);
         //adding the modified tasks
         const allTaskJson = JSON.stringify(allTask);
         localStorage.setItem("allTask", allTaskJson);
@@ -111,11 +111,11 @@ function deleteTask() {
         if (allTask.length < 1) {
             localStorage.clear();
         }
-        const containerTask = document.getElementsByClassName("containerTask");
-        for (let i = 0; i < containerTask.length; i++) {
-            containerTask[i].setAttribute("id", `${i}`);
+        //changing container task id to get specify index to delete it from local storage;
+        const containerTasks = document.getElementsByClassName("containerTask");
+        for (let i = 0; i < containerTasks.length; i++) {
+            containerTasks[i].setAttribute("id", `${i}`);
         }
-
     }
 }
 //function to load tasks from local storage
