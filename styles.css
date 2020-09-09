@@ -32,6 +32,7 @@ label{
     width: inherit;
     background-color: inherit;
     font: bolder large black;
+    overflow-x: hidden;
 }
 /*Task area box that the user saved*/
 #container{
